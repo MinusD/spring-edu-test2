@@ -4,14 +4,14 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 public class SpringDispatcherServlet extends AbstractAnnotationConfigDispatcherServletInitializer {
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return null;
     }
 
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[0];
+        return new Class[]{SpringConfig.class};
     }
 
     protected String[] getServletMappings() {
-        return new String[0];
+        return new String[] {"/"};
     }
 }
